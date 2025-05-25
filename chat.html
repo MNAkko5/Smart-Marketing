@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>دردشة ذكية - منصة تسويق ذكية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="chat.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo" tabindex="0" role="img" aria-label="شعار منصة تسويق ذكية">
+      <h1>تسويق ذكي</h1>
+      <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="30" stroke="#00d2ff" stroke-width="4" fill="none" />
+        <path
+          d="M20 38 L28 26 L36 38 L44 26"
+          stroke="#00d2ff"
+          stroke-width="4"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <circle cx="32" cy="40" r="3" fill="#00d2ff" />
+      </svg>
+    </div>
+
+    <nav role="navigation" aria-label="القائمة الرئيسية">
+      <a href="index.html" tabindex="0">الرئيسية</a>
+      <a href="services.html" tabindex="0">الخدمات</a>
+      <a href="support.html" tabindex="0">الدعم</a>
+      <a href="register.html" tabindex="0">اشتراك</a>
+      <a href="login.html" tabindex="0">تسجيل دخول</a>
+      <a href="chat.html" tabindex="0" class="active">دردشة</a>
+
+      <div class="search-container" role="search">
+        <input type="search" placeholder="ابحث هنا..." aria-label="مربع البحث" />
+        <button aria-label="زر البحث" title="بحث">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="chat-main">
+    <div class="chat-window" id="chatMessages" role="log" aria-live="polite" aria-relevant="additions"></div>
+
+    <form id="chatForm" class="chat-input-form" aria-label="نموذج إرسال رسالة">
+      <input
+        type="text"
+        id="chatInput"
+        placeholder="اكتب رسالتك هنا..."
+        autocomplete="off"
+        aria-label="نص الرسالة"
+        required
+        maxlength="500"
+      />
+      <button type="submit" aria-label="إرسال">إرسال</button>
+    </form>
+  </main>
+
+  <script src="chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+/* تصميم صفحة الشات */
+.chat-main {
+  max-width: 480px;
+  margin: 40px auto 80px auto;
+  background: rgba(0, 210, 255, 0.12);
+  border-radius: 28px;
+  box-shadow: 0 8px 40px rgba(0, 210, 255, 0.35);
+  display: flex;
+  flex-direction: column;
+  height: 620px;
+  overflow: hidden;
+  font-family: 'Cairo', sans-serif;
+  user-select: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.chat-main:hover {
+  box-shadow: 0 12px 60px rgba(0, 210, 255, 0.5);
+}
+
+.chat-window {
+  flex: 1;
+  padding: 25px 30px;
+  overflow-y: auto;
+  color: #e0eaff;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #1b1f46, #131632);
+  border-radius: 28px 28px 0 0;
+  user-select: text;
+  box-shadow: inset 0 0 25px #00d2ff88;
+  scrollbar-width: thin;
+  scrollbar-color: #00d2ff44 transparent;
+}
+
+/* Scrollbar for Webkit */
+.chat-window::-webkit-scrollbar {
+  width: 9px;
+}
+
+.chat-window::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+  background: #00d2ffaa;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+/* كل رسالة */
+.message {
+  margin-bottom: 20px;
+  max-width: 75%;
+  padding: 14px 22px;
+  border-radius: 30px;
+  word-wrap: break-word;
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+  font-weight: 700;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* رسالة المستخدم */
+.message.user {
+  background: #00d2ff;
+  color: #0b0c1a;
+  align-self: flex-start;
+  border-bottom-left-radius: 8px;
+  box-shadow: 0 0 25px #00d2ffbb;
+}
+
+/* رسالة البوت */
+.message.bot {
+  background: #23275a;
+  color: #cce7ff;
+  align-self: flex-end;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 0 20px #00bfffaa;
+}
+
+/* نموذج الإدخال */
+.chat-input-form {
+  display: flex;
+  background: rgba(0, 210, 255, 0.15);
+  padding: 18px 25px;
+  border-top: 3px solid #00d2ff;
+  border-radius: 0 0 28px 28px;
+  box-shadow: inset 0 0 30px #00d2ff99;
+}
+
+.chat-input-form input[type="text"] {
+  flex: 1;
+  border: none;
+  border-radius: 35px;
+  padding: 14px 25px;
+  font-size: 1.15rem;
+  outline: none;
+  color: #0b0c1a;
+  font-weight: 800;
+  box-shadow: 0 0 12px rgba(0, 210, 255, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.chat-input-form input[type="text"]::placeholder {
+  color: #7eaed1;
+  font-weight: 500;
+}
+
+.chat-input-form input[type="text"]:focus {
+  box-shadow: 0 0 20px #00d2ffcc;
+}
+
+/* زر الإرسال */
+.chat-input-form button {
+  background: #00d2ff;
+  border: none;
+  color: #0b0c1a;
+  font-weight: 800;
+  padding: 14px 28px;
+  margin-left: 15px;
+  border-radius: 35px;
+  cursor: pointer;
+  box-shadow: 0 0 20px #00d2ffaa;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.chat-input-form button:hover,
+.chat-input-form button:focus {
+  background: #3a7bd5;
+  color: #fff;
+  transform: scale(1.08);
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .chat-main {
+    margin: 20px 10px 60px 10px;
+    height: 560px;
+  }
+
+  .chat-input-form input[type="text"] {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .chat-input-form button {
+    padding: 12px 22px;
+    font-size: 1rem;
+    margin-left: 10px;
+  }
+}

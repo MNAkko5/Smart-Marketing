@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>تسجيل دخول - منصة تسويق ذكية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo" tabindex="0" role="img" aria-label="شعار منصة تسويق ذكية">
+      <h1>تسويق ذكي</h1>
+      <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="30" stroke="#00d2ff" stroke-width="4" fill="none"/>
+        <path d="M20 38 L28 26 L36 38 L44 26" stroke="#00d2ff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="32" cy="40" r="3" fill="#00d2ff"/>
+      </svg>
+    </div>
+
+    <nav role="navigation" aria-label="القائمة الرئيسية">
+      <a href="index.html" tabindex="0">الرئيسية</a>
+      <a href="services.html" tabindex="0">الخدمات</a>
+      <a href="support.html" tabindex="0">الدعم</a>
+      <a href="register.html" tabindex="0">اشتراك</a>
+      <a href="login.html" tabindex="0" class="active">تسجيل دخول</a>
+      <a href="chat.html" tabindex="0">دردشة</a>
+
+      <div class="search-container" role="search">
+        <input type="search" placeholder="ابحث هنا..." aria-label="مربع البحث" />
+        <button aria-label="زر البحث" title="بحث">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <section>
+    <h2>تسجيل الدخول إلى حسابك</h2>
+    <form id="loginForm" style="max-width: 400px; margin: 0 auto; text-align: right;">
+      <label for="emailLogin">البريد الإلكتروني:</label><br />
+      <input type="email" id="emailLogin" name="emailLogin" required placeholder="ادخل بريدك الإلكتروني" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: none;" /><br />
+      
+      <label for="passwordLogin">كلمة المرور:</label><br />
+      <input type="password" id="passwordLogin" name="passwordLogin" required placeholder="ادخل كلمة المرور" style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 8px; border: none;" /><br />
+      
+      <button type="submit" style="background:#00d2ff; color:#0b0c1a; border:none; border-radius: 25px; padding: 12px 25px; font-size: 1.2rem; cursor: pointer; font-weight: 700;">تسجيل دخول</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 منصة تسويق ذكية - جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('تم تسجيل الدخول بنجاح!');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
